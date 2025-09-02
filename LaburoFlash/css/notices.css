@@ -1,0 +1,244 @@
+/* FUENTES */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Fjalla+One&family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Fjalla+One&family=Maven+Pro:wght@600&family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Fjalla+One&family=Maven+Pro:wght@400;600&family=Oswald:wght@500&family=Sofia+Sans+Semi+Condensed&family=Sofia+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Fjalla+One&family=Maven+Pro:wght@400;600&family=Merriweather&family=Oswald:wght@500&family=Sofia+Sans+Semi+Condensed&family=Sofia+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Righteous&display=swap');
+
+/* GENERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body{
+    background-image: url(../img/fondo-noticias.avif);
+    background-size: 100%;
+    background-repeat: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* HEADER */
+
+#button-previous a{
+    border: 1px solid black;
+
+    border-radius: 4px;
+    color: black;
+    font-size: 20px;
+}
+
+#button-previous{
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    
+    background: linear-gradient(to right, white 0%, 
+    white 50%, rgb(3, 3, 204) 50%, rgb(88, 2, 88) 100%);
+    
+    background-size: 200.2% 100%;
+    transition: background-position 1s;
+
+    display: flex;
+    align-items: center;
+}
+
+#button-previous:hover{
+    background-position: -100% 0;
+    color: white;
+    transition: 1s;
+}
+
+header i{
+    font-size: 25px;
+    margin-right: 5px;
+
+    -webkit-transform: translateY(-2px);
+}
+
+/* CARTAS DE NOTICIAS */
+
+#notices-cards{
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 80.27%;
+    margin: 0 auto;
+}
+
+.image-con{
+    width: 350px;
+    height: 350px;
+    padding: 5px;
+
+    background-color: #e4e2e2;
+
+    margin: 10px;
+}
+
+.image-con img{
+    width: 100%;
+}
+
+.image-con p{
+    font-size: 25px;
+    color: rgb(4, 41, 110);
+
+    text-transform: uppercase;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.container-button-notices{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    margin: 0 auto;
+
+    height: 65px;
+    width: 100%;
+}
+
+.image-con button{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: end;
+
+    width: 120px;
+
+    background-color: rgb(4, 41, 110);
+    color: white;
+
+    padding: 5px;
+    border: 1px solid rgba(19, 19, 20, 0.7);
+    border-radius: 3px;
+
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.image-con button:hover{
+    transition: .5s;
+
+    filter: saturate(200%);}
+
+.image-con button i{
+    font-size: 25px;
+}
+
+/* GRID */  
+
+#information-index{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas: 
+    'info indice'
+    ;
+
+    padding: 15px;
+}
+
+/* SECCIÓN INFORMACIÓN */
+
+#information-notices{
+    grid-area: info;
+}
+
+.title-notices{
+    font-size: 40px;
+}
+
+.container--image{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.container--image img{
+    border-radius: 4px;
+    width: 100%;
+}
+
+.text-information{
+    margin: 10px 0;
+}
+
+.text-information p::first-letter {
+    font-size: 5.6em;
+    float: left;
+    margin-right: 4px;
+    line-height: 0.8; 
+}
+
+.text-information p{
+    margin-left: 1.5em;
+    line-height: 1.5; 
+}
+
+/* INDICE */
+
+#index-information{
+    background-color: #f2f2f2;
+    border-left: 2px solid cornflowerblue;
+    padding: 20px;
+    grid-area: indice;
+
+    margin-left: 15px;
+}
+
+.title-index{
+    font-size: 2em;
+    font-family: 'Righteous', sans-serif;
+
+    text-transform: uppercase;
+}
+
+.subtitle-index{
+    font-size: 1.8em;
+    font-family: 'Righteous', sans-serif;
+
+    margin-top: 60px;
+
+}
+
+.element-list{
+    margin-left: 10px;
+}
+
+.element-list li a{
+    color: #000;
+}
+
+.element-list li a:hover{
+    color: blueviolet;
+}
+
+@media (max-width: 740px){ 
+
+    #information-index{
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    #information-index{
+        grid-template-columns: 100%;
+    }
+
+    #index-information{
+        display: none;
+    }
+} 
