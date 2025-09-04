@@ -106,7 +106,7 @@ header li:hover{
     grid-template-columns: 50% 50%;
     grid-template-rows: 55px 65px;
 
-    background-color: red;
+    background-color: #000; /* BORRAR ESTE COLOR */
 
     height: 300px;
     padding: 15% 10%;
@@ -161,7 +161,7 @@ header li:hover{
     background-color: rgb(238, 133, 5);
 }
 
-/* CATEGORIAS */
+/* CARTAS DE TRABAJO */
 
 .title-jobs{
     text-align: center;
@@ -221,6 +221,7 @@ header li:hover{
     border-bottom-left-radius: 20px;
     border: none;
     border-top: 1px solid black;
+    background-color: #fff;
 
     background-color: none;
     font-size: 15px;

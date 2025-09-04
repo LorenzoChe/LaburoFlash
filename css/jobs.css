@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    padding: 20px;
+}
+
+header i{
+    filter: opacity(80%);
+}
+
+header i:hover{
+    cursor: pointer;
+    filter: opacity(100%);
+}
