@@ -68,12 +68,16 @@ header li:hover{
 }
 
 .buttons-login .bx-user{
-    font-size: 30px;
-    margin: 10px 15px;
+    font-size: 20px;
     color: #000;
+    margin: 0 5px;
 }
 
 #button-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border: 1px solid black;
     padding: 10px;
     border-radius: 4px;
@@ -159,7 +163,7 @@ header li:hover{
 
 /* CATEGORIAS */
 
-.title-categories{
+.title-jobs{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 7px;
@@ -169,7 +173,7 @@ header li:hover{
     font-family: 'Fjalla One', sans-serif;
 }
 
-#categories{
+#jobs{
     width: 100%;
     height: auto;
     margin: 90px auto;
@@ -179,7 +183,7 @@ header li:hover{
     grid-template-columns: 25% 25% 25% 25%;
 }
 
-.categories-card{
+.jobs-card{
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -191,7 +195,7 @@ header li:hover{
     margin: 30px;
 }
 
-.categories-card p{
+.jobs-card p{
     margin-top: 30%;
     font-size: 20px;
     color: black;
@@ -204,7 +208,7 @@ header li:hover{
     background-color: #fff;
 }
 
-.categories-card button{
+.jobs-card button{
     display: flex;
     align-items: start;
     justify-content: center;
@@ -224,7 +228,7 @@ header li:hover{
     cursor: pointer;
 }
 
-.categories-card button:hover{
+.jobs-card button:hover{
     transition: 1s;
     background-position: -100% 0;
 
