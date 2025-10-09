@@ -1,23 +1,37 @@
 <?php
+include "connection.php";
 
-include "connection.php"
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST["email"];
-    $pass = $_POST["pass"];
+    $password = $_POST["password"];
 
-    $email = $conn->real_escape_string($email);
-    $pass = $conn->real_escape_string($pass);
+    $stmt = $conn->prepare("SELECT id, name, email, password FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
 
-    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND pass = '$pass'";
-    $resultado = $conn->query($sql);
+    $result = $stmt->get_result();
 
-    if ($resultado->num_rows > 0) {
-        echo "¡Login exitoso!";
-        // header("Location: index.html");
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+
+        if (password_verify($password, $user["password"])) {
+            echo "¡Login exitoso! Bienvenido, " . htmlspecialchars($user["name"]) . ".";
+
+            // session_start();
+            // $_SESSION["user_id"] = $user["id"];
+            // header("Location: ../index.html");
+            // exit;
+
+        } else {
+            echo "Contraseña incorrecta.";
+        }
     } else {
-        echo "Usuario o contraseña incorrectos.";
+        echo "Correo no registrado.";
     }
-}
 
+    $stmt->close();
+    $conn->close();
+} else {
+    echo "Acceso no autorizado.";
+}
 ?>

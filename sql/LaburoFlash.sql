@@ -154,10 +154,11 @@ CREATE TABLE `task_responses` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `full_name` varchar(120) NOT NULL,
+  `name` varchar(120) NOT NULL,
+  `last_name` varchar(120) NOT NULL,
   `email` varchar(190) NOT NULL,
-  `num_phone` varchar(32) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
+  `phone_number` varchar(15) DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT 1,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `last_login_at` datetime DEFAULT NULL
@@ -263,7 +264,7 @@ ALTER TABLE `task_responses`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `phone_e164` (`num_phone`),
+  ADD UNIQUE KEY `phone_e164` (`phone_number`),
   ADD KEY `created_at` (`created_at`);
 
 --
