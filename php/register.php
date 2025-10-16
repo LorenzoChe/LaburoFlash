@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     $allowed_domains = ['com', 'net', 'org', 'edu', 'gov', 'ar', 'es'];
-    $tld = strtolower(pathinfo($email, PATHINFO_EXTENSION)); 
+    $tld = strtolower(pathinfo($email, PATHINFO_EXTENSION));    
 
     if (!in_array($tld, $allowed_domains)) {
         die("Dominio de correo no permitido.");

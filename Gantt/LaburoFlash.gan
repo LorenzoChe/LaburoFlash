@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-08-01" view-index="0" gantt-divider-location="340" resource-divider-location="300" version="3.3.3316" locale="es_ES">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2025-08-01" view-index="0" gantt-divider-location="340" resource-divider-location="300" version="3.3.3316" locale="es_AR">
     <description/>
     <view zooming-state="default:8" id="gantt-chart">
-        <field id="tpd3" name="Nombre" width="193" order="0"/>
-        <field id="tpd4" name="Fecha de inicio" width="72" order="1"/>
-        <field id="tpd5" name="Fecha de fin" width="74" order="2"/>
-        <field id="tpd15" name="Notas" width="20" order="3"/>
+        <field id="tpd3" name="Name" width="193" order="0"/>
+        <field id="tpd4" name="Begin date" width="72" order="1"/>
+        <field id="tpd5" name="End date" width="74" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
-        <timeline><![CDATA[32,14,29,20,21,31,28,1]]></timeline>
+        <timeline><![CDATA[1,20,31,29,21,14,28,32]]></timeline>
         <option id="color.recent"><![CDATA[#00ffcc #3300cc #f4f4f4 #ff3333 #00cccc #00cc66 #ff9900 #99ff99]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nombre" width="210" order="0"/>
-        <field id="1" name="Función" width="86" order="1"/>
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -122,7 +122,7 @@
                 </task>
             </task>
         </task>
-        <task id="4" uid="6cb4d6e359f14fd1b6bdb27e4a975972" name="Documentación" color="#3300cc" meeting="false" start="2025-08-04" duration="65" complete="0" expand="true">
+        <task id="4" uid="6cb4d6e359f14fd1b6bdb27e4a975972" name="Documentación" color="#3300cc" meeting="false" start="2025-08-04" duration="65" complete="0" expand="false">
             <depend id="5" type="2" difference="0" hardness="Strong"/>
             <task id="28" uid="b22af7039f5b42049b0edab07ddc9f74" name="Manual técnico" color="#3300cc" meeting="false" start="2025-08-04" duration="65" complete="0" expand="true">
                 <notes><![CDATA[Documentar el código, la estructura y la base de datos para uso interno y mantenimiento.]]></notes>
@@ -131,7 +131,7 @@
             <task id="29" uid="51259c6736b04399ad0f81a4baee2d84" name="Manual de usuario" color="#3300cc" meeting="false" start="2025-08-04" duration="65" complete="0" expand="true">
                 <notes><![CDATA[Elaborar una guia clara que explique como usar la plataforma paso a paso.]]></notes>
             </task>
-            <task id="35" uid="5a2baa811e8540f0aee612552412653b" name="Manual de Procedimiento" meeting="false" start="2025-08-04" duration="1" complete="0" expand="true"/>
+            <task id="35" uid="5a2baa811e8540f0aee612552412653b" name="Manual de Procedimiento" meeting="false" start="2025-08-04" duration="65" complete="0" expand="true"/>
         </task>
         <task id="5" uid="da0862f55dec43398b26040b3bb65474" name="Pruebas" color="#00cc66" meeting="false" start="2025-11-03" duration="20" complete="0" expand="false">
             <depend id="6" type="2" difference="0" hardness="Strong"/>
@@ -146,7 +146,7 @@
                 <notes><![CDATA[Solucionar fallas encontradas durante las pruebas para garantizar la estabilidad del sistema.]]></notes>
             </task>
         </task>
-        <task id="6" uid="41c4aa210a78451a97b5f1ed2594bdbf" name="Lanzamiento" color="#00ffcc" meeting="false" start="2025-12-01" duration="10" complete="0" expand="true">
+        <task id="6" uid="41c4aa210a78451a97b5f1ed2594bdbf" name="Lanzamiento" color="#00ffcc" meeting="false" start="2025-12-01" duration="10" complete="0" expand="false">
             <task id="33" uid="a417f758a2524c7786d6155c96ee44e5" name="Publicacion en Hosting" color="#00ffcc" meeting="false" start="2025-12-01" duration="5" complete="0" expand="true">
                 <notes><![CDATA[Subir la plataforma del hosting.]]></notes>
                 <depend id="34" type="2" difference="0" hardness="Strong"/>
