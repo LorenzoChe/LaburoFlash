@@ -56,7 +56,7 @@ header i:hover{
 form{ /* CONTENEDOR FORMULARIO */
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 60px 60px 60px 60px 60px 75px;
+    grid-auto-rows: auto;
 
     background-color: rgba(0, 0, 0, 0.65);
     border: 2px solid rgba(43, 43, 43);
@@ -72,7 +72,7 @@ form{ /* CONTENEDOR FORMULARIO */
 }
 
 .form-f1{
-    height: 300px;
+    min-height: 300px;
     margin-bottom: 300px;
 }
 
@@ -93,6 +93,7 @@ input{ /* CAMPOS DE INFORMACIÓN */
     margin: 10px auto 0;
     padding: 20px;
     width: 100%;
+    height: 60px;
 
     filter: opacity(50%);
     background-color: #f2f2f2;
@@ -155,6 +156,40 @@ form a:hover{
     color: #e6e6e6;
 }
 
+/* ALERTAS */
+.alert{
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    animation: slideDown 0.3s ease-out;
+}
+
+.alert-success{
+    background-color: #4CAF50;
+    color: #fff;
+    border: 2px solid #45a049;
+}
+
+.alert-error{
+    background-color: #f44336;
+    color: #fff;
+    border: 2px solid #da190b;
+}
+
+@keyframes slideDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* FOOTER */
 
 footer{
@@ -185,7 +220,7 @@ footer{
     }
 
     footer{
-        display: flez;
+        display: flex;
         flex-direction: column;
     }
 

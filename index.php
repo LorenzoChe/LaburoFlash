@@ -1,9 +1,11 @@
+<?php
+include "php/session_check.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS STYLE PRINCIPAL -->
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -12,49 +14,35 @@
 <body>
     
     <header>
-        <!-- ELEMENTOS A LA IZQUIERDA DEL HEADER -->
-
         <ul class="elements-header">
             <li><a href="#">Contactános</a></li>
             <li><a href="#information">Sobre Nosotros</a></li>
         </ul>
 
-        <!-- BOTONES DE INICIO DE SESIÓN -->
-
         <div class="buttons-login">
-            <a id="button-login" href="login.html">Iniciar Sesión   </a>
-        <!--<i class='bx bxs-user'></i> USAR AL INICIAR SESION-->            
+            <span>Bienvenido, <?php echo htmlspecialchars($_SESSION["user_name"] ?? "Usuario"); ?>!</span>
+            <a id="button-login" href="employer_dashboard.php" style="margin-right: 10px;">Panel Empleador</a>
+            <a id="button-login" href="worker_dashboard.php" style="margin-right: 10px;">Panel Trabajador</a>
+            <a id="button-login" href="php/logout.php">Cerrar Sesión</a>
         </div>
         
     </header>
 
-        <!-- CONTENEDOR GENERAL DE LOS BOTONES -->
-
         <section class="buttons-principal-page">
-
-            <!-- BOTONES -->
-
-            <div class="button button-login" onclick="window.location.href='login.html'">
-                <a href="login.html">Iniciar Sesión</a>
+            <div class="button button-post" onclick="window.location.href='jobs.php'">
+                <a href="jobs.php">Ver trabajos</a>
             </div>
     
-            <div class="button button-register" onclick="window.location.href='register.html'">
-                <a href="login.html">Registrarse</a>
-            </div>
-    
-            <div class="button button-post" onclick="window.location.href='jobs.html'">
-                <a href="jobs.html">Ver trabajos</a>
+            <div class="button button-post" onclick="window.location.href='form-jobs.html'">
+                <a href="form-jobs.html">Publicar trabajo</a>
             </div>
     
         </section>
 
-        <!-- TITULO CATEGORIAS -->
     <h1 class="title-information">información</h1>
         
-        <!-- CUADRANTES DE INFORMACIÓN -->
-        <section id="information"> <!-- ABRE SECCIÓN -->
-
-            <div class="information-card i1"> <!-- ABRE CARTA -->
+        <section id="information">
+            <div class="information-card i1">
 
                 <div class="container-img">
                     <img src="img/prueba-3.webp" alt="img">
@@ -69,10 +57,9 @@
                     eius molestiae? Facere, labore iste.
                 </p>
 
-            </div>   <!-- CIERRA CARTA -->
+            </div>
 
-
-            <div class="information-card i2"> <!-- ABRE CARTA -->
+            <div class="information-card i2">
 
                 <div class="container-img">
                     <img src="img/prueba-3.webp" alt="img">
@@ -87,15 +74,11 @@
                     eius molestiae? Facere, labore iste.
                 </p>
 
-            </div>   <!-- CIERRA CARTA -->
+            </div>
 
-        </section> <!-- CIERRA SECCIÓN -->
+        </section>
 
-
-        <!-- FOOTER -->
-        <footer> <!-- ABRE FOOTER -->
-
-            <!-- CONTENEDOR 1 -->
+        <footer>
             <div class="container-footer-information f1">
 
                 <dl>
@@ -108,11 +91,9 @@
                     <dd>elemento 3</dd>
                     <dd>elemento 4</dd>
 
-                </dl> <!-- CIERRE CONTENEDOR 1 -->
+                </dl>
 
             </div>
-
-            <!-- CONTENEDOR 2 -->
             <div class="container-footer-information f2">
 
                 <dl>
@@ -125,9 +106,7 @@
 
                 </dl>
 
-            </div> <!-- CIERRE CONTENEDOR 2 -->
-
-            <!-- CONTENEDOR 3 -->
+            </div>
             <div class="container-footer-networks f3">
 
                 <dl>
@@ -145,11 +124,10 @@
 
                 </dl>
 
-            </div> <!-- CIERRE CONTENEDOR 3 -->
+            </div>
 
-        </footer> <!-- CIERRE FOOTER -->
+        </footer>
 
 </body>
 
 </html>
-
